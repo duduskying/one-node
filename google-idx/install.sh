@@ -1,4 +1,3 @@
-```bash
 #!/usr/bin/env sh
 
 PORT="${PORT:-8080}"
@@ -30,4 +29,3 @@ $PWD/startup.sh
 echo '---------------------------------------------------------------'
 echo "vless://$UUID@your_server_ip:$PORT?encryption=none&type=ws&path=%2F#idx-vless-ws"
 echo '---------------------------------------------------------------'
-```
