@@ -4,25 +4,39 @@
   },
   "inbounds": [
     {
-      "listen": null,
+      "listen": "0.0.0.0",
       "port": $PORT,
       "protocol": "vless",
       "settings": {
         "decryption": "none",
         "clients": [
           {
-            "email": "idx-xhttp",
-            "flow": "",
+            "email": "idx-reality-vision",
+            "flow": "xtls-rprx-vision",
             "id": "$UUID"
           }
         ]
       },
       "streamSettings": {
-        "network": "xhttp",
-        "xhttpSettings": {
-          "host": "",
-          "mode": "auto",
-          "path": "/"
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "$SNI:443",
+          "xver": 0,
+          "serverNames": [
+            "$SNI"
+          ],
+          "privateKey": "$PRIVATE_KEY",
+          "minClientVer": "",
+          "maxClientVer": "",
+          "maxTimeDiff": 0,
+          "shortIds": [
+            "5ecabccf64e7cbf1",
+            "006b6e109ce652e2",
+            "898bdda8de4abec8",
+            "0bb5c753ced6badd"
+          ]
         }
       }
     }
