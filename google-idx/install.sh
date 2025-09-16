@@ -27,5 +27,5 @@ $PWD/startup.sh
 
 # 6. 打印节点信息
 echo '---------------------------------------------------------------'
-echo "vless://$UUID@your_server_ip:$PORT?encryption=none&type=ws&path=%2F#idx-vless-ws"
+echo "vmess://$(echo -n '{\"v\": \"2\", \"ps\": \"idx-vmess-ws\", \"add\": \"your_server_ip\", \"port\": \"$PORT\", \"id\": \"$UUID\", \"aid\": \"0\", \"net\": \"ws\", \"type\": \"none\", \"host\": \"\", \"path\": \"/\", \"tls\": \"none\"}' | base64 -w 0)#idx-vmess-ws"
 echo '---------------------------------------------------------------'
