@@ -6,13 +6,13 @@
     {
       "listen": null,
       "port": $PORT,
-      "protocol": "vless",
+      "protocol": "vmess",
       "settings": {
-        "decryption": "none",
         "clients": [
           {
-            "email": "idx-vless-ws",
-            "id": "$UUID"
+            "id": "$UUID",
+            "alterId": 0,
+            "email": "idx-vmess-ws"
           }
         ]
       },
