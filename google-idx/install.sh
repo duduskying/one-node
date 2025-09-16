@@ -17,14 +17,14 @@ rm -f Xray-linux-64.zip
 
 # 3. add config file (using local template with fixed shortIds, or download and replace)
 # Assuming you save the above template as xray-config-template.json in the same dir
-cp ../xray-config-template.json config.json  # If template is local; otherwise wget and sed
+wget -O config.json https://raw.githubusercontent.com/duduskying/one-node/refs/heads/main/google-idx/xray-config-template.json
 sed -i 's/$PORT/'$PORT'/g' config.json
 sed -i 's/$UUID/'$UUID'/g' config.json
 sed -i 's/$PRIVATE_KEY/'$PRIVATE_KEY'/g' config.json
 sed -i 's/$SNI/'$SNI'/g' config.json
 
 # 4. create startup.sh
-wget https://raw.githubusercontent.com/vevc/one-node/refs/heads/main/google-idx/startup.sh
+wget https://raw.githubusercontent.com/duduskying/one-node/refs/heads/main/google-idx/startup.sh
 sed -i 's#$PWD#'$PWD'#g' startup.sh
 chmod +x startup.sh
 
